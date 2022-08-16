@@ -12,6 +12,7 @@
 /_bundles
 /lib
 /lib-esm
+/dist
 
 # misc
 .DS_Store
