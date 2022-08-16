@@ -1,8 +1,37 @@
 {
-    "extends": "./tsconfig-base.json",
     "compilerOptions": {
-        "module": "esnext",
-        "outDir": "dist/mjs",
-        "target": "esnext",
-    }
+        "module": "commonjs",
+        "target": "ES5",
+        "lib": [
+            "ES2015",
+            "dom"
+        ],
+        "outDir": "lib",
+        "allowJs": false,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "jsx": "react-jsx",
+        "declaration": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "types": [
+            "node",
+            "jest"
+        ]
+    },
+    "include": [
+        "src/lib"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "assets",
+        "public",
+        "src/index.tsx",
+        "**/*.test.tsx",
+        "**/*.test.ts"
+    ],
 }

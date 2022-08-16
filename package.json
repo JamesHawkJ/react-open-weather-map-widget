@@ -1,6 +1,8 @@
 {
-  "name": "weather-widget",
-  "version": "0.0.1",
+  "name": "react-open-weather-map-widget",
+  "version": "1.0.0",
+  "description": "Open weather map widget written in react",
+  "license": "MIT",
   "author": {
     "name": "Jan Jankowski",
     "email": "jan.jankowski.pl@gmail.com"
@@ -9,14 +11,20 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "lodash": "^4.17.21",
     "styled-components": "^5.3.5"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "scripts": {
-    "build:commonjs_and_esm": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup",
-    "test": "react-scripts test"
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -m es6 --outDir lib-esm",
+    "clean": "rm -rf _bundles lib lib-esm",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && webpack"
   },
   "eslintConfig": {
     "extends": [
@@ -46,15 +54,23 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.25",
-    "lodash": "^4.17.21",
-    "typescript": "^4.7.4"
+    "react-scripts": "5.0.1",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/mjs/index.js",
-  "exports": {
-    ".": {
-      "import": "./dist/mjs/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  }
+  "keywords": [
+    "react",
+    "widget",
+    "open-weather-map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesHawkJ/react-open-weather-map-widget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JamesHawkJ/react-open-weather-map-widget/issues"
+  },
+  "homepage": "https://github.com/JamesHawkJ/react-open-weather-map-widget#readme"
 }

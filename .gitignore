@@ -9,7 +9,9 @@
 /coverage
 
 # production
-/dist
+/_bundles
+/lib
+/lib-esm
 
 # misc
 .DS_Store
