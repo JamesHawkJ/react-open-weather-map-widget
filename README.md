@@ -19,7 +19,7 @@ If you have questions or need help, please ask in [GitHub Discussions](https://g
 ## Installation
 
 ```sh
-npm i @JamseHawkJ/react-open-weather-map-widget
+npm i react-open-weather-map-widget
 ```
 
 ## Get Started
@@ -109,8 +109,3 @@ It must implement this interface:
 Here's the dark theme as an example:
 
 ![image description](assets/theme_example.png)
-
-
-## Building
-
-

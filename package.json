@@ -1,6 +1,6 @@
 {
   "name": "react-open-weather-map-widget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open weather map widget written in react",
   "license": "MIT",
   "author": {
@@ -18,13 +18,8 @@
     }
   },
   "scripts": {
-    "start": "react-scripts start",
     "test": "react-scripts test",
-    "build:cjs": "tsc",
-    "build:esm": "tsc -m es6 --outDir lib-esm",
-    "clean": "rm -rf _bundles lib lib-esm",
-    "build:tsup": "tsup src/lib/index.ts --format cjs,esm --dts --clean",
-    "build": "npm run clean && npm run build:cjs && npm run build:esm && webpack"
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean"
   },
   "browserslist": {
     "production": [
@@ -48,6 +43,9 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.4.3",
@@ -57,12 +55,13 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.25",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "ts-loader": "^9.3.1",
+    "styled-components": "^5.3.5",
     "tsup": "^6.2.2",
-    "typescript": "^4.7.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "typescript": "^4.7.4"
   },
   "keywords": [
     "react",
