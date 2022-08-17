@@ -35,7 +35,39 @@ You'll need to pass the API Key as a prop to the component. The prop is called `
 
 ## Example
 
-To try out the example clone this repository, then insert you API key as the appid prop at `src/index.tsx` and run `npm run start`.
+to quickly try out this component:
+
+```sh
+npx create-react-app example --template=typescript
+```
+
+then change the `App.tsx` return to:
+
+```html
+    <div style={
+      {
+        height: '800px',
+        width: '800px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        background: '#302e38'
+      }
+    }>
+      <WeatherWidget
+        appid='d52d13ab21c51cf8be7c1714ad517494'
+        defaultCity='Monaco'
+        theme='dark'
+      />
+    </div>
+```
+
+and from the root of the app run `npm run start`.
+
+>
+>The component will take the full width of the parent that's why I added the wrapper in the example
+>
 
 You should see this view:
 
